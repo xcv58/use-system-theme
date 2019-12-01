@@ -1,23 +1,22 @@
-/**
- * @class ExampleComponent
- */
+import { useEffect, useState } from 'react'
 
-import * as React from 'react'
+const getMql = () => (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')) || undefined
 
-import styles from './styles.css'
+const getSystemTheme = (matches: boolean) => matches ? 'dark' : 'light'
 
-export type Props = { text: string }
+export type SystemTheme = 'dark' | 'light'
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+const initialDrakStatus = getMql().matches
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+function useSystemTheme() {
+  const [systemTheme, setSystemTheme] = useState<SystemTheme>(getSystemTheme(initialDrakStatus))
+  useEffect(() => {
+    const mql = getMql()
+    const mqlListener = (e: any) => setSystemTheme(getSystemTheme(e.matches))
+    mql && mql.addListener(mqlListener)
+    return () => mql && mql.removeListener(mqlListener)
+  }, [])
+  return systemTheme
 }
+
+export default useSystemTheme

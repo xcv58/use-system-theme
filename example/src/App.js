@@ -1,13 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
+import useSystemTheme from 'use-system-theme'
 
-import ExampleComponent from 'use-system-theme'
-
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
+export default () => {
+  const systemTheme = useSystemTheme()
+  const isDark = systemTheme === 'dark'
+  const style = {
+    display: 'flex',
+    padding: '10rem',
+    height: '100vh',
+    justifyContent: 'center',
+    backgroundColor: isDark ? 'black' : 'white',
+    color: isDark ? 'white' : 'black'
   }
+  return (
+    <div style={style}>The System Theme is: <strong>{systemTheme}</strong></div>
+  )
 }

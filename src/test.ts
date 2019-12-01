@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import useSystemTheme from './'
 
-describe('ExampleComponent', () => {
+describe('useSystemTheme', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(useSystemTheme).toBeTruthy()
   })
 })

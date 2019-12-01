@@ -2,9 +2,15 @@
 
 > React Hook for System Theme
 
-[![NPM](https://img.shields.io/npm/v/use-system-theme.svg)](https://www.npmjs.com/package/use-system-theme) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/use-system-theme.svg)](https://www.npmjs.com/package/use-system-theme)
 
 ## Install
+
+```bash
+yarn add use-system-theme
+```
+
+or
 
 ```bash
 npm install --save use-system-theme
@@ -13,16 +19,14 @@ npm install --save use-system-theme
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import React from 'react'
+import useSystemTheme from 'use-system-theme'
 
-import MyComponent from 'use-system-theme'
-
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+export default () => {
+  const systemTheme = useSystemTheme()
+  return (
+    <div>The System Theme is: {systemTheme}</div>
+  )
 }
 ```
 
