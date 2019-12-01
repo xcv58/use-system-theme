@@ -6,7 +6,7 @@ export default () => {
   const isDark = systemTheme === 'dark'
   const style = {
     display: 'flex',
-    padding: '10rem',
+    paddingTop: '10rem',
     height: '100vh',
     justifyContent: 'center',
     backgroundColor: isDark ? 'black' : 'white',
