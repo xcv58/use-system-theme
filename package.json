@@ -19,8 +19,8 @@
     "start": "rollup -c -w",
     "watch:yalc": "nodemon -x yalc push",
     "prepare": "yarn run build",
-    "predeploy": "rm -rf node_modules && cd example && yarn install && yarn run build && cd .. && yarn",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "cd examples/create-react-app && yarn install && yarn run build",
+    "deploy": "gh-pages -d examples/create-react-app/build"
   },
   "dependencies": {},
   "peerDependencies": {
