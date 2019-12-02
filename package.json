@@ -17,15 +17,15 @@
     "test:watch": "react-scripts-ts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
+    "watch:yalc": "nodemon -x yalc push",
     "prepare": "yarn run build",
     "predeploy": "rm -rf node_modules && cd example && yarn install && yarn run build && cd .. && yarn",
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {},
   "peerDependencies": {
-    "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^4.3.3",
@@ -36,6 +36,7 @@
     "babel-runtime": "^6.26.0",
     "cross-env": "^6.0.3",
     "gh-pages": "^2.1.1",
+    "nodemon": "^2.0.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-scripts-ts": "^3.1.0",
@@ -47,7 +48,8 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-typescript2": "^0.25.2",
     "rollup-plugin-url": "^3.0.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "yalc": "^1.0.0-pre.34"
   },
   "files": [
     "dist"
