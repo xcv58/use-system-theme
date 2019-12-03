@@ -1,0 +1,3 @@
+{
+  "sandboxes": ["/examples/create-next-app", "/examples/create-react-app"]
+}
