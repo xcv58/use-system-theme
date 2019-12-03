@@ -1,0 +1,12 @@
+{
+  "name": "use-system-theme",
+  "builds": [{
+    "src": "examples/create-next-app/package.json",
+    "use": "@now/next"
+  }],
+  "routes": [{
+    "src": "/(.*)",
+    "dest": "examples/create-next-app/$1",
+    "continue": true
+  }]
+}

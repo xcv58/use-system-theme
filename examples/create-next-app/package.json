@@ -16,6 +16,6 @@
     "next": "9.1.4",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "use-system-theme": "file:.yalc/use-system-theme"
+    "use-system-theme": "0.0.3"
   }
 }

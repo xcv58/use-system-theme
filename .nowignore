@@ -1,0 +1,16 @@
+.yalc
+yalc.lock
+examples/*
+dist/
+src/
+.circleci/
+.codesandbox/
+.editorconfig
+.travis.yml
+CHANGELOG.md
+README.md
+rollup.config.js
+tsconfig.json
+tsconfig.test.json
+
+!examples/create-next-app
