@@ -14,7 +14,7 @@ references:
       key: *yarn_key
 
 jobs:
-  build-test:
+  build:
     docker:
       - image: circleci/node:12
     steps:
