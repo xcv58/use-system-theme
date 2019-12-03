@@ -1,0 +1,28 @@
+version: 2.1
+references:
+  yarn_key: &yarn_key
+    v1-dependencies-{{ checksum "yarn.lock" }}
+
+  save_yarn_cache: &save_yarn_cache
+    save_cache:
+      key: *yarn_key
+      paths:
+        - node_modules
+
+  restore_yarn_cache: &restore_yarn_cache
+    restore_cache:
+      key: *yarn_key
+
+jobs:
+  build-test:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - *restore_yarn_cache
+      - run: yarn install
+      - *save_yarn_cache
+      - run: yarn test
+      - store_artifacts:
+          path: dist
+          destination: dist
