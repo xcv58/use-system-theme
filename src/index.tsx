@@ -12,11 +12,9 @@ const getSystemTheme = (matches: boolean) => matches ? 'dark' : 'light'
 export type SystemTheme = 'dark' | 'light'
 
 function useSystemTheme() {
-  const isServer = typeof window === 'undefined'
-  const initTheme = isServer ? 'light' : getSystemTheme(getMql()!.matches)
-  const [systemTheme, setSystemTheme] = useState<SystemTheme>(initTheme)
-  const mql = getMql()
+  const [systemTheme, setSystemTheme] = useState<SystemTheme>('light')
   useEffect(() => {
+    const mql = getMql()
     const mqlListener = (e: any) => setSystemTheme(getSystemTheme(e.matches))
     if (mql) {
       setSystemTheme(getSystemTheme(mql.matches))
