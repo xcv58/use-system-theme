@@ -1,19 +1,27 @@
 import { useEffect, useState } from 'react'
 
-const getMql = () => (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')) || undefined
+const getMql = () => {
+  if (typeof window === 'undefined') {
+    return
+  }
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
+}
 
 const getSystemTheme = (matches: boolean) => matches ? 'dark' : 'light'
 
 export type SystemTheme = 'dark' | 'light'
 
-const initialDrakStatus = getMql().matches
-
 function useSystemTheme() {
-  const [systemTheme, setSystemTheme] = useState<SystemTheme>(getSystemTheme(initialDrakStatus))
+  const isServer = typeof window === 'undefined'
+  const initTheme = isServer ? 'light' : getSystemTheme(getMql()!.matches)
+  const [systemTheme, setSystemTheme] = useState<SystemTheme>(initTheme)
+  const mql = getMql()
   useEffect(() => {
-    const mql = getMql()
     const mqlListener = (e: any) => setSystemTheme(getSystemTheme(e.matches))
-    mql && mql.addListener(mqlListener)
+    if (mql) {
+      setSystemTheme(getSystemTheme(mql.matches))
+      mql.addListener(mqlListener)
+    }
     return () => mql && mql.removeListener(mqlListener)
   }, [])
   return systemTheme
