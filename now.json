@@ -1,12 +1,35 @@
 {
   "name": "use-system-theme",
-  "builds": [{
-    "src": "examples/create-next-app/package.json",
-    "use": "@now/next"
-  }],
-  "routes": [{
-    "src": "/(.*)",
-    "dest": "examples/create-next-app/$1",
-    "continue": true
-  }]
+  "builds": [
+    {
+      "src": "examples/create-next-app/package.json",
+      "use": "@now/next"
+    },
+    {
+      "src": "examples/create-react-app/package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "build": {
+    "env": {
+      "PUBLIC_URL": "/create-react-app"
+    }
+  },
+  "routes": [
+    {
+      "src": "/create-react-app/{0,1}(.*)",
+      "dest": "examples/create-react-app/$1",
+      "continue": false
+    },
+    {
+      "src": "/create-next-app/{0,1}(.*)",
+      "dest": "examples/create-next-app/$1",
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "examples/create-next-app/$1",
+      "continue": true
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 .yalc
 yalc.lock
-examples/*
 dist/
-src/
+/package.json
+/src
 .circleci/
 .codesandbox/
 .editorconfig

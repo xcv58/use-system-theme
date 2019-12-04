@@ -9,9 +9,10 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-scripts": "^3.2.0",
-    "use-system-theme": "file:.yalc/use-system-theme"
+    "use-system-theme": "^0.0.3"
   },
   "scripts": {
+    "now-build": "react-scripts build && mv build dist",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
