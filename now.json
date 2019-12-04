@@ -17,19 +17,28 @@
   },
   "routes": [
     {
+      "src": "/create-react-app/(.*\\.(json|js))",
+      "dest": "examples/create-react-app/$1"
+    },
+    {
+      "src": "/create-react-app/static/(.*)",
+      "dest": "examples/create-react-app/static/$1"
+    },
+    {
       "src": "/create-react-app/{0,1}(.*)",
-      "dest": "examples/create-react-app/$1",
-      "continue": false
+      "dest": "examples/create-react-app/"
     },
     {
       "src": "/create-next-app/{0,1}(.*)",
-      "dest": "examples/create-next-app/$1",
-      "continue": true
+      "dest": "examples/create-next-app/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "examples/create-next-app/$1",
-      "continue": true
+      "dest": "examples/create-next-app/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "examples/create-next-app/"
     }
   ]
 }
