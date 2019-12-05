@@ -7,7 +7,7 @@ const getMql = () => {
   return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
 }
 
-const getSystemTheme = (matches: boolean) => matches ? 'dark' : 'light'
+const getSystemTheme = (matches: boolean) => (matches ? 'dark' : 'light')
 
 export type SystemTheme = 'dark' | 'light'
 
