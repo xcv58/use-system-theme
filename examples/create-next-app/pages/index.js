@@ -2,26 +2,29 @@ import React from 'react'
 import useSystemTheme from 'use-system-theme'
 
 export default () => {
-  const systemTheme = useSystemTheme()
+  const systemTheme = useSystemTheme(true)
   const isDark = systemTheme === 'dark'
   const style = {
-    display: 'flex',
     paddingTop: '10rem',
     height: '100vh',
-    justifyContent: 'center',
+    textAlign: 'center',
     backgroundColor: isDark ? 'black' : 'white',
     color: isDark ? 'white' : 'black'
   }
   return (
     <>
-    <div style={style}>The System Theme is: {systemTheme}</div>
-      <style jsx global>{`
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: sans-serif;
-        }
-      `}
+      <div style={style}>
+        <h1>Create React App</h1>
+        <p>The System Theme is: {systemTheme}</p>
+      </div>
+      <style jsx global>
+        {`
+          body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+          }
+        `}
       </style>
     </>
   )

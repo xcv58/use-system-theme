@@ -32,19 +32,47 @@ import useSystemTheme from 'use-system-theme'
 
 export default () => {
   const systemTheme = useSystemTheme()
-  return (
-    <div>The System Theme is: {systemTheme}</div>
-  )
+  return <div>The System Theme is: {systemTheme}</div>
 }
 ```
 
 ## SSR support
 
+The `useSystemTheme` function has only one argument `isSSR`, and you must pass `true` for SSR app. Otherwise, your app may have bug like doesn't show dark them on dark theme devices.
+
+```tsx
+declare const useSystemTheme: (isSSR?: boolean) => SystemTheme
+```
+
+```tsx
+import React from 'react'
+import useSystemTheme from 'use-system-theme'
+
+export default () => {
+  const systemTheme = useSystemTheme(true)
+  return <div>The System Theme is: {systemTheme}</div>
+}
+```
+
 To support SSR (server side rendering), the initial theme will be always `light` (since we don't know the theme on the server side) and it would immediately become `dark` if the device's theme is `dark`. Unfortunately, we can't avoid this because of the [React hydrate](https://reactjs.org/docs/react-dom.html#hydrate):
 
 > React expects that the rendered content is identical between the server and the client.
 
-So that the initial screen is `light` and become `dark` immediately on dark theme devices is not a bug.
+So that for all SSR app, the initial screen will be `light` and become `dark` immediately on dark theme devices. It's caused by the nature of how React SSR works.
+
+## Development
+
+`yarn start`
+
+To build the library and watch the file changes locally.
+
+### Develop with local examples
+
+The local examples use the [yalc](https://github.com/whitecolor/yalc) to get live local version library.
+
+You need to run `yarn watch:yalc` on the root directory during development. And use `npx yalc add use-system-theme` in the example directory under `examples/`. Then follow the README file in each example folder.
+
+Note: the `yalc` will change the `pcakge.json` for the example project to `"use-system-theme": "file:.yalc/use-system-theme"`. Please do **NOT** commit the change because it would cause CI/CD failure.
 
 ## License
 

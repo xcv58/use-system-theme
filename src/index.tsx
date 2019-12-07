@@ -11,8 +11,19 @@ const getSystemTheme = (matches: boolean) => (matches ? 'dark' : 'light')
 
 export type SystemTheme = 'dark' | 'light'
 
-function useSystemTheme() {
-  const [systemTheme, setSystemTheme] = useState<SystemTheme>('light')
+const getDefaultTheme = (isSSR: boolean): SystemTheme => {
+  if (!isSSR) {
+    const mql = getMql()
+    if (mql) {
+      return getSystemTheme(mql.matches)
+    }
+  }
+  return 'light'
+}
+
+const useSystemTheme = (isSSR: boolean = false) => {
+  const defaultTheme = getDefaultTheme(isSSR)
+  const [systemTheme, setSystemTheme] = useState<SystemTheme>(defaultTheme)
   useEffect(() => {
     const mql = getMql()
     const mqlListener = (e: any) => setSystemTheme(getSystemTheme(e.matches))

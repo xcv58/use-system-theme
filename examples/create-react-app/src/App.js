@@ -5,14 +5,16 @@ export default () => {
   const systemTheme = useSystemTheme()
   const isDark = systemTheme === 'dark'
   const style = {
-    display: 'flex',
     paddingTop: '10rem',
     height: '100vh',
-    justifyContent: 'center',
+    textAlign: 'center',
     backgroundColor: isDark ? 'black' : 'white',
     color: isDark ? 'white' : 'black'
   }
   return (
-    <div style={style}>The System Theme is: {systemTheme}</div>
+    <div style={style}>
+      <h1>Create React App</h1>
+      <p>The System Theme is: {systemTheme}</p>
+    </div>
   )
 }
