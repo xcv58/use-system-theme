@@ -1,14 +1,3 @@
-/examples
-/src
-node_modules
-.circleci
-.codesandbox
-.editorconfig
-.nowignore
-.prettierrc.yaml
-.travis.yml
-README.md
-now.json
-rollup.config.js
-tsconfig.json
-tsconfig.test.json
+*
+!/dist
+!/package.json
