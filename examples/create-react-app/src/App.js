@@ -4,6 +4,7 @@ import useSystemTheme from 'use-system-theme'
 export default () => {
   const systemTheme = useSystemTheme()
   const isDark = systemTheme === 'dark'
+  console.log({ systemTheme, isDark })
   const style = {
     paddingTop: '10rem',
     height: '100vh',

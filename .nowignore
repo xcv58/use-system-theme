@@ -2,7 +2,9 @@
 yalc.lock
 dist/
 /package.json
+/yarn.lock
 /src
+.next/
 .circleci/
 .codesandbox/
 .editorconfig
@@ -12,5 +14,3 @@ README.md
 rollup.config.js
 tsconfig.json
 tsconfig.test.json
-
-!examples/create-next-app
