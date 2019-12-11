@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn add xcv58/use-system-theme && next build",
+    "build": "yarn add ../../ && next build",
     "start": "next start"
   },
   "resolutions": {

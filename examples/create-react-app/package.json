@@ -12,7 +12,7 @@
     "use-system-theme": "^0.0.3"
   },
   "scripts": {
-    "now-build": "yarn add xcv58/use-system-theme && react-scripts build && mv build dist",
+    "now-build": "yarn add ../../ && react-scripts build && mv build dist",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

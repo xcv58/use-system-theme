@@ -1,7 +1,5 @@
 .yalc
 yalc.lock
-dist/
-/package.json
 /yarn.lock
 /src
 .next/
