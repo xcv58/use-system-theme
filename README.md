@@ -14,7 +14,6 @@ It detects the system theme and will update right after the users change the the
 
 ![2019-12-25 19 43 26](https://user-images.githubusercontent.com/503123/71456630-3008bc80-274f-11ea-8a57-f8a619b31a60.gif)
 
-
 ## Install
 
 ```bash
@@ -38,6 +37,11 @@ export default () => {
   return <div>The System Theme is: {systemTheme}</div>
 }
 ```
+
+## Browser support
+
+As 2019 December, all major browsers on both mobile and desktop platforms support the `prefers-color-scheme media query` feature. For more details, please check:
+[https://caniuse.com/#feat=prefers-color-scheme](https://caniuse.com/#feat=prefers-color-scheme)
 
 ## SSR support
 
