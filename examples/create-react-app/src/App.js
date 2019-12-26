@@ -1,5 +1,6 @@
 import React from 'react'
 import useSystemTheme from 'use-system-theme'
+import Browser from './Browser'
 
 export default () => {
   const systemTheme = useSystemTheme()
@@ -16,6 +17,7 @@ export default () => {
     <div style={style}>
       <h1>Create React App</h1>
       <p>The System Theme is: {systemTheme}</p>
+      <Browser />
     </div>
   )
 }

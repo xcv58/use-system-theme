@@ -1,5 +1,6 @@
 import React from 'react'
 import useSystemTheme from 'use-system-theme'
+import Browser from '../components/Browser'
 
 export default () => {
   const systemTheme = useSystemTheme(true)
@@ -17,6 +18,7 @@ export default () => {
       <div style={style}>
         <h1>Create React App</h1>
         <p>The System Theme is: {systemTheme}</p>
+        <Browser />
       </div>
       <style jsx global>
         {`
