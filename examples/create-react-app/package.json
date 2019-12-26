@@ -5,11 +5,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "bowser": "^2.7.0",
     "prop-types": "^15.6.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-scripts": "^3.2.0",
-    "use-system-theme": "^0.0.3"
+    "use-system-theme": "^0.0.4"
   },
   "scripts": {
     "now-build": "yarn add ../../ && react-scripts build && mv build dist",
