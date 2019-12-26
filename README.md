@@ -12,6 +12,9 @@ React Hook for System Theme (User preferred color scheme). Please use React `> 1
 
 It detects the system theme and will update right after the users change the theme.
 
+![2019-12-25 19 43 26](https://user-images.githubusercontent.com/503123/71456630-3008bc80-274f-11ea-8a57-f8a619b31a60.gif)
+
+
 ## Install
 
 ```bash
