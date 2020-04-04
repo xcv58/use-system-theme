@@ -52,7 +52,7 @@
     "rollup-plugin-postcss": "2.0.3",
     "rollup-plugin-typescript2": "0.25.2",
     "rollup-plugin-url": "3.0.1",
-    "standard-version": "7.0.1",
+    "standard-version": "7.1.0",
     "typescript": "3.7.2",
     "yalc": "1.0.0-pre.34"
   },
