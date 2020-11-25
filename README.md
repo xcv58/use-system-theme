@@ -4,8 +4,6 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/min/use-system-theme)
 
 [![CircleCI](https://circleci.com/gh/xcv58/use-system-theme.svg?style=svg)](https://circleci.com/gh/xcv58/use-system-theme)
-[![peerDependencies Status](https://david-dm.org/xcv58/use-system-theme/peer-status.svg)](https://david-dm.org/xcv58/use-system-theme?type=peer)
-[![devDependencies Status](https://david-dm.org/xcv58/use-system-theme/dev-status.svg)](https://david-dm.org/xcv58/use-system-theme?type=dev)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b9d2a00973782602d73a/maintainability)](https://codeclimate.com/github/xcv58/use-system-theme/maintainability)
 
 React Hook for System Theme (User preferred color scheme). Please use React `> 16.8.0` for React Hooks support.
