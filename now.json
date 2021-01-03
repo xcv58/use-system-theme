@@ -3,11 +3,11 @@
   "builds": [
     {
       "src": "examples/create-next-app/package.json",
-      "use": "@now/next"
+      "use": "@vercel/next"
     },
     {
       "src": "examples/create-react-app/package.json",
-      "use": "@now/static-build"
+      "use": "@vercel/static-build"
     }
   ],
   "build": {
