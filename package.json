@@ -54,7 +54,7 @@
     "rollup-plugin-url": "3.0.1",
     "standard-version": "9.1.0",
     "typescript": "4.1.5",
-    "yalc": "1.0.0-pre.47"
+    "yalc": "1.0.0-pre.50"
   },
   "files": [
     "/dist"
