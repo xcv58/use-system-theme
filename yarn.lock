@@ -12500,10 +12500,10 @@ y18n@^5.0.5:
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-5.0.5.tgz#8769ec08d03b1ea2df2500acef561743bbb9ab18"
   integrity sha512-hsRUr4FFrvhhRH12wOdfs38Gy7k2FFzB9qgN9v3aLykRq0dRcdcpz5C9FxdS2NuhOrI/628b/KSTJ3rwHysYSg==
 
-yalc@1.0.0-pre.52:
-  version "1.0.0-pre.52"
-  resolved "https://registry.yarnpkg.com/yalc/-/yalc-1.0.0-pre.52.tgz#b3c500a6a59740c33be14b78d837d143c30193d5"
-  integrity sha512-dfrN5w2xMlFnlwfpWXI5lSIO7W+KRlY7HIlydIsjEeh8a0rhF36JJ8rtijJbmLUGmIlXVpCWSrSUGVYbLbRjAQ==
+yalc@1.0.0-pre.53:
+  version "1.0.0-pre.53"
+  resolved "https://registry.yarnpkg.com/yalc/-/yalc-1.0.0-pre.53.tgz#c51db2bb924a6908f4cb7e82af78f7e5606810bc"
+  integrity sha512-tpNqBCpTXplnduzw5XC+FF8zNJ9L/UXmvQyyQj7NKrDNavbJtHvzmZplL5ES/RCnjX7JR7W9wz5GVDXVP3dHUQ==
   dependencies:
     chalk "^4.1.0"
     detect-indent "^6.0.0"
