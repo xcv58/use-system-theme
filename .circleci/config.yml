@@ -15,7 +15,7 @@ references:
 jobs:
   build:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:15
     steps:
       - checkout
       - *restore_yarn_cache
@@ -28,7 +28,7 @@ jobs:
 
   publish:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:15
     steps:
       - checkout
       - *restore_yarn_cache
