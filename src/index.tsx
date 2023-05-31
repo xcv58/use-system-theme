@@ -26,12 +26,13 @@ const useSystemTheme = (isSSR: boolean = false) => {
   const [systemTheme, setSystemTheme] = useState<SystemTheme>(defaultTheme)
   useEffect(() => {
     const mql = getMql()
-    const mqlListener = (e: any) => setSystemTheme(getSystemTheme(e.matches))
+    const mqlListener = (e: MediaQueryListEvent) =>
+      setSystemTheme(getSystemTheme(e.matches))
     if (mql) {
       setSystemTheme(getSystemTheme(mql.matches))
-      mql.addListener(mqlListener)
+      mql.addEventListener('change', mqlListener)
     }
-    return () => mql && mql.removeListener(mqlListener)
+    return () => mql && mql.removeEventListener('change', mqlListener)
   }, [])
   return systemTheme
 }
